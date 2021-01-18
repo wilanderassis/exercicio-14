@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  color: #d8d8d8;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #212121;
+}
+
+a{
+  color: #d8d8d8!important;
+}
+
+a:hover{
+  color: orange!important;
+  text-decoration: none;
+}
+
+hr{
+  border: 1px solid #d8d8d84d;
+}
+

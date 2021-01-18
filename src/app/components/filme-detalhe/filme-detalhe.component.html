@@ -1,0 +1,17 @@
+<section class="detalhe" *ngIf="filme !== undefined">
+
+  <div class="container1">
+    <div class="col1">
+      <img [src]="filme.poster[0].url">
+    </div>
+    <div class="col1">
+      <h2>{{filme.nome}}</h2>
+      <p><strong>Gênero:&nbsp; </strong>{{filme.genero}}</p>
+      <p><strong>Descrição:&nbsp; </strong>{{filme.descricao}}</p>
+      <p><strong>Ano:&nbsp; </strong>{{filme.ano}}</p>
+      <p><strong>Diretor:&nbsp; </strong>{{filme.diretor}}</p>
+      <button routerLink="" type="button">Voltar</button>
+    </div>
+  </div>
+
+</section>

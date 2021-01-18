@@ -1,0 +1,72 @@
+<header>
+  <!-- MENU SUPERIOR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <!-- LOGO -->
+    <a class="navbar-brand logo" href="#">Blockbuster</a>
+    <!-- BOTÃO DO MENU RESPONSIVO -->
+    <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- LISTA DO MENU -->
+    <div class="collapse navbar-collapse justify-content-center menu-lista ml-2" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active">Início <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/acao" routerLinkActive="active">Ação <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/terror" routerLinkActive="active">Terror <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/comedia" routerLinkActive="active">Comédia <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/ficcao-cientifica" routerLinkActive="active">Ficção científica <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/todos" routerLinkActive="active">Todos <span
+              class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fab fa-facebook-square"></i></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fab fa-twitter-square"></i></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fab fa-instagram-square"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="pesquisa">
+    <input type="text" placeholder="Digite o nome do filme" [(ngModel)]="nome" (input)="pesquisar()">
+
+  </div>
+
+  <div class="lista" *ngIf="nome !== ''">
+    <ul>
+      <li *ngFor="let filme of filmes"><a (click)="apagarPesquisa()" [routerLink]="['/filme-detalhe', filme.id]">
+          {{filme.nome}}
+
+        </a></li>
+    </ul>
+  </div>

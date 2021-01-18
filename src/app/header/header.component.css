@@ -1,0 +1,116 @@
+/* MENU */
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111111!important;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.logo{
+  font-size: 30px;
+}
+
+
+/* CAMPO DE PESQUISA */
+
+.pesquisa {
+  height: 60px;
+  background-color: #1b1b1b;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pesquisa input {
+  width: 100%;
+  margin: 0 250px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  background-color: #d8d8d8;
+  color: #181818;
+}
+
+.pesquisa input:focus {
+  outline-style: none;
+}
+
+/* LISTA COM RESULTADO DA PESQUISA */
+
+.lista {
+  background-color: white;
+  width: 71.6%;
+  margin: 2px 250px;
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 1s;
+}
+
+.lista a {
+  color: #616161!important;
+}
+
+.social{
+  font-size: 25px;
+}
+
+/* SMARTPHONE */
+
+@media (max-width: 720px) {
+  /* MENU SUPERIOR */
+  nav {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .social {
+    display: none;
+  }
+  /* CAMPO DE PESQUISA */
+  .pesquisa input {
+    width: 81%;
+    margin: 0 35px;
+  }
+  /* LISTA COM RESULTADO DA PESQUISA */
+  .lista {
+    width: 81%;
+    margin: 0;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  .lista a {
+    color: #212121!important;
+  }
+}
+
+/* TABLET */
+
+@media(max-width: 952px) {
+  .social {
+    display: none;
+  }
+  /* CAMPO DE PESQUISA */
+  .pesquisa input {
+    max-width: 81%;
+    margin: 0 35px;
+  }
+  /* LISTA COM RESULTADO DA PESQUISA */
+  .lista {
+    width: 81%;
+    margin: 0 auto;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  .lista a {
+    color: #212121!important;
+  }
+}

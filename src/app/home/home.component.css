@@ -1,0 +1,18 @@
+.carousel1 {
+  padding-top: 60px;
+}
+
+/* SMARTPHONE */
+
+@media (max-width: 500px) {
+  .carousel1 {
+    display: none;
+  }
+  .categorias {
+    margin-bottom: -700px;
+  }
+}
+
+/* TABLET */
+
+@media(max-width: 720px) {}
